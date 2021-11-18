@@ -13,6 +13,7 @@ pillow = "*"
 gunicorn = "*"
 python-decouple = "*"
 whitenoise = "*"
+django-project = "*"
 
 [dev-packages]
 
