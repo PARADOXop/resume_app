@@ -36,7 +36,7 @@ else:
     
     DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['paradoxportfolio.herokuapp.com']
 
 
 # Application definition
@@ -137,7 +137,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'media')
 ]
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
