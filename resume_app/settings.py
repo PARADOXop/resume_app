@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 import os
 import django_heroku
-
+import psycopg2
 
 import dj_database_url
 from decouple import config
@@ -149,6 +149,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 LOGGING = {
     'version': 1,
