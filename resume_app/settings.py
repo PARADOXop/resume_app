@@ -36,7 +36,7 @@ else:
     
     DEBUG = False
 
-ALLOWED_HOSTS = ['paradoxportfolio.herokuapp.com']
+ALLOWED_HOSTS = ['http://127.0.0.1', 'paradoxportfolio.herokuapp.com']
 
 
 # Application definition
