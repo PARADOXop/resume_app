@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import django_heroku
 import psycopg2
-import storages
 import dj_database_url
 from decouple import config, Csv
 
