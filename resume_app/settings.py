@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv()) 
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'main',
     'gunicorn',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -132,7 +133,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'media')
 ]
 
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3ManifestStaticStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "static"
@@ -158,7 +159,7 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
 STATICFILES_DEFAULT = 'storages.backends.s3boto3.S3Boto3Storage'
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 
