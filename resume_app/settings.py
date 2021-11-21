@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'main',
-    'storages',
     'gunicorn'
 ]
 
