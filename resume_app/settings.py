@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'ckeditor',
     'main',
     'gunicorn',
-    'storages',
 ]
 
 MIDDLEWARE = [
