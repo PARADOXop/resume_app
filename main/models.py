@@ -24,11 +24,11 @@ class UserProfile(models.Model):
         verbose_name = 'User Profile'
     
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.ImageField(blank=True, null=True, upload_to="avatar", default='static/images/photo.jpg')
+    avatar = models.ImageField(blank=True, null=True, upload_to="avatar", default="static/images/photo.jpg")
     title = models.CharField(max_length=200, blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
     skills = models.ManyToManyField(Skill, blank=True)
-    cv = models.FileField(blank=True, null=True, upload_to="cv", default='static/images/Resume.pdf')
+    cv = models.FileField(blank=True, null=True, upload_to="cv", default="static/images/Resume.pdf")
 
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name}'
