@@ -37,7 +37,9 @@ Start Content
       <div class="row g-4 g-md-3  align-items-center">
         <div class="col-md-auto order-md-last">
           <div class="bannerUserImg">
+            {% if me.userprofile.avatar.url %}
             <img src="{{me.userprofile.avatar.url}}" alt="{{me.first_name|title}} {{me.last_name|title}} avatar">
+            {% endif %}
           </div>
         </div>
         <div class="col-md">
