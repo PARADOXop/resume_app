@@ -31,7 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv()) 
-
+APPEND_SLASH = False
 
 # Application definition
 
